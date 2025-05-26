@@ -10,6 +10,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float speed;
     public float jumpSpeed;
     float verticalVelocity;
+    public float jumpForce;
 
     public float turnSmoothTime;
     float turnSmoothVelocity;
@@ -35,31 +36,16 @@ public class ThirdPersonMovement : MonoBehaviour
 
 
 
-        if (controller.isGrounded && Input.GetKeyDown(KeyCode.Space) == false)
+        if (cont.isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
-            jumps = 2;
-            verticalVelocity = 0;
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-
             verticalVelocity = jumpForce;
         }
+        else if (-2 < verticalVelocity && verticalVelocity < 3)
+        {
+            verticalVelocity += Physics.gravity.y / 24f;
 
         }
-        else if (-2 < verticalVelocity && verticalVelocity < 3 && gravAffect)
-        {
-            verticalVelocity += Physics.gravity.y / 1.4f;
-
-        }
-        else if (gravAffect)
-        {
-            verticalVelocity += grav;
-            ground = false;
-        }
-        else
-        {
-            verticalVelocity = 0;
-        }
+            verticalVelocity += Physics.gravity.y / 20f;
 
         if (verticalVelocity <= -20) verticalVelocity = -20;
 
