@@ -6,6 +6,10 @@ public class Fire : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "wawa") Destroy(this.gameObject);
+        if (other.gameObject.tag == "wawa")
+        {
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+        }
     }
 }
