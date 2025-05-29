@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -375,7 +375,11 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
+<<<<<<< Updated upstream
     m_SensorSize: {x: 1.3333334, y: 1}
+=======
+    m_SensorSize: {x: 2.6103897, y: 1}
+>>>>>>> Stashed changes
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -572,6 +576,80 @@ MonoBehaviour:
   jumpSpeed: 0
   jumpForce: 15
   turnSmoothTime: 0.1
+--- !u!1001 &1170116975
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1178975311}
+    m_Modifications:
+    - target: {fileID: 2364691709805513860, guid: bf8e8ccc3486cf8499e72efacebb93fd,
+        type: 3}
+      propertyPath: m_Name
+      value: wawa
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364691709805513862, guid: bf8e8ccc3486cf8499e72efacebb93fd,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364691709805513863, guid: bf8e8ccc3486cf8499e72efacebb93fd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.08759999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364691709805513863, guid: bf8e8ccc3486cf8499e72efacebb93fd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3115261
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364691709805513863, guid: bf8e8ccc3486cf8499e72efacebb93fd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.4114991
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364691709805513863, guid: bf8e8ccc3486cf8499e72efacebb93fd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.111465886
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364691709805513863, guid: bf8e8ccc3486cf8499e72efacebb93fd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.10246587
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364691709805513863, guid: bf8e8ccc3486cf8499e72efacebb93fd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.6584924
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364691709805513863, guid: bf8e8ccc3486cf8499e72efacebb93fd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7372001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364691709805513863, guid: bf8e8ccc3486cf8499e72efacebb93fd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364691709805513863, guid: bf8e8ccc3486cf8499e72efacebb93fd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -181.685
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364691709805513863, guid: bf8e8ccc3486cf8499e72efacebb93fd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -557.338
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364691709805513863, guid: bf8e8ccc3486cf8499e72efacebb93fd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 456.198
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bf8e8ccc3486cf8499e72efacebb93fd, type: 3}
 --- !u!1 &1178975310
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,7 +678,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.008, y: 0.184, z: 0.288}
   m_LocalScale: {x: 0.81412077, y: 0.151, z: 0.50835705}
-  m_Children: []
+  m_Children:
+  - {fileID: 1544355198}
   m_Father: {fileID: 788245458}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -714,7 +793,11 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
+<<<<<<< Updated upstream
     m_SensorSize: {x: 1.3333334, y: 1}
+=======
+    m_SensorSize: {x: 2.6103897, y: 1}
+>>>>>>> Stashed changes
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -818,6 +901,37 @@ MonoBehaviour:
   m_Damping: 0
   m_DampingWhenOccluded: 0
   m_OptimalTargetDistance: 0
+--- !u!1 &1544355197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2364691709805513860, guid: bf8e8ccc3486cf8499e72efacebb93fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1170116975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1544355198 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2364691709805513863, guid: bf8e8ccc3486cf8499e72efacebb93fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1170116975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1544355199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544355197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a14c05c19fe8b4aa1df811788bb8d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  water: {fileID: 1544355201}
+--- !u!198 &1544355201 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2364691709805513862, guid: bf8e8ccc3486cf8499e72efacebb93fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1170116975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1570133183
 GameObject:
   m_ObjectHideFlags: 3
@@ -1230,7 +1344,11 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
+<<<<<<< Updated upstream
     m_SensorSize: {x: 1.3333334, y: 1}
+=======
+    m_SensorSize: {x: 2.6103897, y: 1}
+>>>>>>> Stashed changes
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1307,7 +1425,11 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
+<<<<<<< Updated upstream
     m_SensorSize: {x: 1.3333334, y: 1}
+=======
+    m_SensorSize: {x: 2.6103897, y: 1}
+>>>>>>> Stashed changes
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
