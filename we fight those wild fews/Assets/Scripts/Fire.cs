@@ -12,4 +12,11 @@ public class Fire : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<HealthManager>().iframes == false)
+        {
+            other.gameObject.GetComponent<HealthManager>().HP -= 1;
+        }
+    }
 }
