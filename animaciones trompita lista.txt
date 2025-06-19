@@ -1,0 +1,13 @@
+caminando
+salto
+caer
+planear con orejas
+muerte
+fin de nivel
+expulsar agua
+sorber agua
+hacha
+encontrar pista
+recibir daño
+idle
+propulsión hacia arriba
