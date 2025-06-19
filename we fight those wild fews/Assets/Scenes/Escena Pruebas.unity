@@ -257,7 +257,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.14883488, y: 0.000000007860417, z: -0.0000000011951172, w: 0.9888621}
+  m_LocalRotation: {x: 0.14883488, y: -0.000000007860419, z: 0.0000000011951176, w: 0.9888621}
   m_LocalPosition: {x: 3.41, y: 3.612536, z: -5.366596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -380,6 +380,7 @@ GameObject:
   - component: {fileID: 1015278794}
   - component: {fileID: 1015278793}
   - component: {fileID: 1015278792}
+  - component: {fileID: 1015278797}
   m_Layer: 0
   m_Name: river i guess
   m_TagString: wawa source
@@ -471,6 +472,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1015278797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015278791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d86e081f1737664694fb09a21695ebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedyWater: 0.5
+--- !u!1 &1214569683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1214569685}
+  - component: {fileID: 1214569684}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1214569684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214569683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86bb99da5d62ec542b6f57ca5f4aca79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1214569685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214569683}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.6400003, y: 0.5543598, z: 1.5100001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1497445498
 GameObject:
@@ -854,12 +911,12 @@ PrefabInstance:
     - target: {fileID: 6235551560381266986, guid: 6bc958c701b505145bb17504687577c5,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000085055
+      value: -0.000000008505502
       objectReference: {fileID: 0}
     - target: {fileID: 6235551560381266986, guid: 6bc958c701b505145bb17504687577c5,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000001292801
+      value: 0.0000000012928012
       objectReference: {fileID: 0}
     - target: {fileID: 6235551560381266986, guid: 6bc958c701b505145bb17504687577c5,
         type: 3}

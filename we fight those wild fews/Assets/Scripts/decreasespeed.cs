@@ -4,28 +4,22 @@ using UnityEngine;
 
 public class decreasespeed : MonoBehaviour
 {
-    private bool isInWater=false;
-    public float speedywater= 0.5f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    bool inWater = false;
+    public float speedyWater = 0.5f;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-         void OnTriggerEnter(collider other)
+        if(other.gameObject.tag== "Player")
         {
-            if(other.gameObject.tag== "wawa source"){
-                isInWater= true;
-                other.GetComponentInParent<ThirdPersonMovement>().speed *= speedywater;
-            }
+            inWater= true;
+            other.GetComponentInParent<ThirdPersonMovement>().speed *= speedyWater;
+        }
 
         }
-        void OnTriggerExit(collider other){
-            isInWater= false;
-            other.GetComponentInParent<ThirdPersonMovement>().speed %= speedywater;
+        private void OnTriggerExit(Collider other)
+        {
+            inWater= false;
+            other.GetComponentInParent<ThirdPersonMovement>().speed /= speedyWater;
         }
-    }
+ 
 }
