@@ -12,6 +12,7 @@ public class HealthManager : MonoBehaviour
 
     void Update()
     {
+        if (HP <= 0) GetComponentInParent < DeathManager >().Muerte();
         if (HP < pastHP) StartCoroutine(Iframes());
         pastHP = HP;
     }
