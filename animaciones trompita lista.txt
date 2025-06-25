@@ -1,13 +1,13 @@
-caminando
-salto
-caer
+caminando hecho
+salto hecho
+caer hecho
 planear con orejas
 muerte
 fin de nivel
-expulsar agua
-sorber agua
+expulsar agua hecho
+sorber agua hecho
 hacha
 encontrar pista
 recibir daño
-idle
-propulsión hacia arriba
+idle hecho
+propulsión hacia arriba hecho
