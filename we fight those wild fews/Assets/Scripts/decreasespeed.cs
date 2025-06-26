@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class decreasespeed : MonoBehaviour
 {
-    bool inWater = false;
     public float speedyWater = 0.5f;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag== "Player")
         {
-            inWater= true;
+            other.GetComponentInParent<wawa>().inWater= true;
             other.GetComponentInParent<ThirdPersonMovement>().speed *= speedyWater;
         }
 
-        }
-        private void OnTriggerExit(Collider other)
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag== "Player")
         {
-            inWater= false;
+             other.GetComponentInParent<wawa>().inWater= true;
             other.GetComponentInParent<ThirdPersonMovement>().speed /= speedyWater;
         }
+    }
  
-}
+}z

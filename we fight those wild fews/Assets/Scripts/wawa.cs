@@ -5,10 +5,10 @@ using UnityEngine;
 public class wawa : MonoBehaviour
 { 
    public ParticleSystem water;
-    public float watermeter;
-    public float watermax = 100f;
-    public float watermin = 0f;
-    bool inwater = false; 
+    public int watermeter;
+    public int watermax = 100;
+    public int watermin = 0;
+    public bool inWater = false; 
     // Start is called before the first frame update
     void Start()
     {
@@ -19,25 +19,36 @@ public class wawa : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(other.gameObject.tag== "water") 
+        if (Input.GetButtonDown("1")||inWater=true)
+        {
+            while(watermeter<watermax)
+            {
+                watermeter += 1; 
+            }
+            
+
+        }
+        
+
+
+
         if (Input.GetButtonDown("Fire1"))
         {
-            if (watermeter > 0)
-            {
-                water.Play();
+                while(watermeter>watermin)
+                {
+                   water.Play(); 
+                }
+                
+                
                     
                 Debug.Log("agarra");
-            }
+            
         }
         if (Input.GetButtonUp("Fire1"))
         {
-            if (watermeter == 0)
-            {
-
-                
-    Debug.Log("mouse 0 up");
+             Debug.Log("mouse 0 up");
                 water.Stop();
-            }
+            
         }
         
     }
