@@ -7,19 +7,19 @@ public class enemy : MonoBehaviour
    // public static event Action<enemy> OnEnemyKilled; 
     public float health, maxhealth = 3f;
     public float enemySpeed = 5f;
-    Rigidbody3D rb; 
+    Rigidbody rb; 
     public Transform target; 
     Vector2 moveDirection;
     void awake()
     {
-       rb = GetComponent<Rigidbody3D>();
+       rb = GetComponent<Rigidbody>();
     }
     
     // Start is called before the first frame update
     void Start()
     {
         health= maxhealth;
-        target= gameObject.Find("Player").transform;
+        target= GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class enemy : MonoBehaviour
         if(target){
             Vector3 direction = (target.position - transform.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x)*Mathf.Rad2Deg;
-            rb.rotation= angle;
+            //rb.rotation = angle;
             moveDirection= direction;
         }
         
@@ -36,6 +36,6 @@ public class enemy : MonoBehaviour
     }
     void FixedUpdate()
     {
-       rb.velocity= new Vector2(moveDirection.x, moveDirection.y)*moveSpeed; 
+       //rb.velocity= new Vector2(moveDirection.x, moveDirection.y)*moveSpeed; 
     }
 }
