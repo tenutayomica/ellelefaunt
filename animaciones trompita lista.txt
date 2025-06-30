@@ -1,13 +1,3 @@
-﻿caminando hecho
-salto hecho
-caer hecho
-planear con orejas
-muerte
+﻿muerte
 fin de nivel
-expulsar agua hecho
-sorber agua hecho
-hacha hecho
-encontrar pista hecho
-recibir daño
-idle hecho
-propulsión hacia arriba hecho
+
