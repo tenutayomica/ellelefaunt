@@ -19,11 +19,12 @@ public class wawa : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("1") && inWater==true)
+        if (Input.GetMouseButtonDown(1) && inWater==true)
         {
             while(watermeter<watermax)
             {
                 watermeter += 1; 
+                Debug.Log(watermeter);
             }
             
 
@@ -37,6 +38,8 @@ public class wawa : MonoBehaviour
                 while(watermeter>watermin)
                 {
                    water.Play(); 
+                   watermeter -= 1; 
+                   Debug.Log(watermeter);
                 }
                 
                 
