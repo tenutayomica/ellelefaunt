@@ -1,4 +1,4 @@
-caminando hecho
+﻿caminando hecho
 salto hecho
 caer hecho
 planear con orejas
@@ -7,7 +7,7 @@ fin de nivel
 expulsar agua hecho
 sorber agua hecho
 hacha hecho
-encontrar pista
+encontrar pista hecho
 recibir daño
 idle hecho
 propulsión hacia arriba hecho
