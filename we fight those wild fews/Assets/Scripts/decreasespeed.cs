@@ -24,4 +24,4 @@ public class decreasespeed : MonoBehaviour
         }
     }
  
-}z
+}
