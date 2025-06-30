@@ -6,7 +6,7 @@ muerte
 fin de nivel
 expulsar agua hecho
 sorber agua hecho
-hacha
+hacha hecho
 encontrar pista
 recibir daño
 idle hecho
