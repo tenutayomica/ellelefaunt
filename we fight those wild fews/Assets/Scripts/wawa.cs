@@ -6,7 +6,7 @@ public class wawa : MonoBehaviour
 { 
    public ParticleSystem water;
     public int watermeter;
-    public int watermax = 100;
+    public int watermax = 200;
     public int watermin = 0;
     public bool inWater = false; 
     // Start is called before the first frame update
@@ -19,29 +19,32 @@ public class wawa : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1) && inWater==true)
+        if (Input.GetMouseButton(1) && inWater==true)
         {
-            while(watermeter<watermax)
+            if(watermeter<watermax)
             {
-                watermeter += 1; 
+                watermeter += 2; 
                 Debug.Log(watermeter);
             }
             
 
         }
-        
+     
+       
 
 
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1"))
         {
-                while(watermeter>watermin)
+                if(watermeter>watermin)
                 {
                    water.Play(); 
                    watermeter -= 1; 
-                   Debug.Log(watermeter);
+                   
                 }
-                
+                else{
+                    water.Stop();
+                }
                 
                     
                 Debug.Log("agarra");
@@ -49,7 +52,7 @@ public class wawa : MonoBehaviour
         }
         if (Input.GetButtonUp("Fire1"))
         {
-             Debug.Log("mouse 0 up");
+             
                 water.Stop();
             
         }

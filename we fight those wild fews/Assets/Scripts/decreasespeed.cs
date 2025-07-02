@@ -10,7 +10,7 @@ public class decreasespeed : MonoBehaviour
     {
         if(other.gameObject.tag== "Player")
         {
-            other.GetComponentInParent<wawa>().inWater= true;
+            other.gameObject.GetComponentInChildren<wawa>().inWater= true;
             other.GetComponentInParent<ThirdPersonMovement>().speed *= speedyWater;
         }
 
@@ -19,7 +19,7 @@ public class decreasespeed : MonoBehaviour
     {
         if(other.gameObject.tag== "Player")
         {
-             other.GetComponentInParent<wawa>().inWater= true;
+            other.gameObject.GetComponentInChildren<wawa>().inWater= true;
             other.GetComponentInParent<ThirdPersonMovement>().speed /= speedyWater;
         }
     }
