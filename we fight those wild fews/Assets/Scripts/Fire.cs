@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class Fire : MonoBehaviour
 {
-    private void OnTriggerStay(Collider other)
+    public int life = 1;
+    private void OnParticleCollision(GameObject other)
     {
+        Debug.Log("entra");
+  
         if (other.gameObject.tag == "wawa")
-        {
-            Destroy(other.gameObject);
-            Destroy(this.gameObject);
-        }
+            life -= 1;
+            if (life <= 0)
+            {
+    
+              Destroy(this.gameObject);
+              Debug.Log("muere");
+            }
+           
+        
     }
     private void OnTriggerStay(Collider other)
     {
