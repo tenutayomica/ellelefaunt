@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class enemy : MonoBehaviour
 {
-   // public static event Action<enemy> OnEnemyKilled; 
-    public float health, maxhealth = 3f;
     public float enemySpeed = 5f;
     Rigidbody rb; 
     public Transform target; 
@@ -18,7 +16,7 @@ public class enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health= maxhealth;
+        
         target= GameObject.Find("Player").transform;
     }
 
