@@ -1,39 +1,53 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class enemy : MonoBehaviour
 {
-    public float enemySpeed = 5f;
-    Rigidbody rb; 
-    public Transform target; 
-    Vector2 moveDirection;
-    void awake()
+   [Range(0,50)] [SerializeField] float attackRange = 5, sightRange = 20, timeBetweenAtacks = 3;
+    Vector3 playerPos;
+    private NavMeshAgent thisEnemy;
+    private bool isAttacking; 
+    private void Start()
     {
-       rb = GetComponent<Rigidbody>();
-    }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
+        thisEnemy = GetComponent<NavMeshAgent>();
         
-        target= GameObject.Find("Player").transform;
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if(target){
-            Vector3 direction = (target.position - transform.position).normalized;
-            float angle = Mathf.Atan2(direction.y, direction.x)*Mathf.Rad2Deg;
-            //rb.rotation = angle;
-            moveDirection= direction;
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+        float distanceFromPlayer = Vector3.Distance(playerPos, this.transform.position);
+        if(distanceFromPlayer<=sightRange && distanceFromPlayer > attackRange)
+        {
+            isAttacking = false;
+            StopAllCoroutines();
+            ChasePlayer();
+            thisEnemy.isStopped = false; 
         }
-        
-        
+        if(distanceFromPlayer <= sightRange && !isAttacking)
+        {
+            thisEnemy.isStopped = true;
+            StartCoroutine(AttackPlayer()); 
+        }
     }
-    void FixedUpdate()
+    private void ChasePlayer()
     {
-       //rb.velocity= new Vector2(moveDirection.x, moveDirection.y)*moveSpeed; 
+        thisEnemy.SetDestination(playerPos);
+    }
+    private IEnumerator AttackPlayer()
+    {
+        isAttacking = true;
+        yield return new WaitForSeconds(timeBetweenAtacks);
+        Debug.Log("hurt");
+        isAttacking = false; 
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(this.transform.position, sightRange);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(this.transform.position, attackRange); 
+        
     }
 }
