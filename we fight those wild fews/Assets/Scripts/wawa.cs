@@ -8,7 +8,8 @@ public class wawa : MonoBehaviour
     public int watermeter;
     public int watermax = 200;
     public int watermin = 0;
-    public bool inWater = false; 
+    public bool inWater = false;
+    public Animator ani;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,8 +27,11 @@ public class wawa : MonoBehaviour
                 watermeter += 2; 
                 Debug.Log(watermeter);
             }
-            
-
+            ani.SetBool("Sucking", true);
+        }
+        else
+        {
+            ani.SetBool("Sucking", false);
         }
      
        
@@ -36,6 +40,7 @@ public class wawa : MonoBehaviour
 
         if (Input.GetButton("Fire1"))
         {
+            ani.SetBool("Shooting", true);
                 if(watermeter>watermin)
                 {
                    water.Play(); 
@@ -52,9 +57,8 @@ public class wawa : MonoBehaviour
         }
         if (Input.GetButtonUp("Fire1"))
         {
-             
-                water.Stop();
-            
+            ani.SetBool("Shooting", false);
+            water.Stop();
         }
         
     }

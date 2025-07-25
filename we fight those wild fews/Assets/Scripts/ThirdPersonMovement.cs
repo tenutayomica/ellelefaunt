@@ -11,9 +11,10 @@ public class ThirdPersonMovement : MonoBehaviour
     public float jumpSpeed;
     float verticalVelocity;
     public float jumpForce;
-
+    public Animator ani;
     public float turnSmoothTime;
     float turnSmoothVelocity;
+    bool walk;
 
     void Update()
     {
@@ -29,6 +30,11 @@ public class ThirdPersonMovement : MonoBehaviour
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             cont.Move(moveDir.normalized * speed * Time.deltaTime);
+            ani.SetBool("Moving", true);
+        }
+        else
+        {
+            ani.SetBool("Moving", false);
         }
         
         Vector3 moveHigh = new Vector3(0, verticalVelocity, 0);
@@ -39,6 +45,11 @@ public class ThirdPersonMovement : MonoBehaviour
         if (cont.isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             verticalVelocity = jumpForce;
+            ani.SetTrigger("Jump");
+        }
+        else if (cont.isGrounded)
+        {
+            verticalVelocity = 0;
         }
         else if (-2 < verticalVelocity && verticalVelocity < 3)
         {
@@ -49,7 +60,8 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (verticalVelocity <= -20) verticalVelocity = -20;
 
-
+        if (cont.isGrounded) ani.SetBool("Grounded", true);
+        else ani.SetBool("Grounded", false);
 
     }
 }
