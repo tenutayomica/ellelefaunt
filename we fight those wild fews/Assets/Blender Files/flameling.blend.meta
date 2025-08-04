@@ -1,4 +1,14 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+guid: 0a664991a390ead4280707831ccdea4c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    2186277476908879412: ImportLogs
+=======
+>>>>>>> Stashed changes
 guid: d5df6392b539d59469585030c7f67551
 ModelImporter:
   serializedVersion: 23
@@ -39,6 +49,10 @@ ModelImporter:
     7400018: Skeleton|Run
     9500000: //RootNode
     13700000: Eyes
+<<<<<<< Updated upstream
+=======
+>>>>>>> d60e10446bb3cdf38a048eb457640f0904a184fb
+>>>>>>> Stashed changes
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -92,7 +106,15 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
+<<<<<<< Updated upstream
     hasPreviousCalculatedGlobalScale: 1
+=======
+<<<<<<< HEAD
+    hasPreviousCalculatedGlobalScale: 0
+=======
+    hasPreviousCalculatedGlobalScale: 1
+>>>>>>> d60e10446bb3cdf38a048eb457640f0904a184fb
+>>>>>>> Stashed changes
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

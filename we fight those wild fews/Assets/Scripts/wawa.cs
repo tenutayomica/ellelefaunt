@@ -52,7 +52,7 @@ public class wawa : MonoBehaviour
                 }
                 
                     
-                Debug.Log("agarra");
+                
             
         }
         if (Input.GetButtonUp("Fire1"))

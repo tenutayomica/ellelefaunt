@@ -5,20 +5,26 @@ using UnityEngine;
 public class Fire : MonoBehaviour
 {
     public int life = 1;
-    private void OnParticleCollision(GameObject other)
+     void OnParticleTrigger()
     {
-        Debug.Log("entra");
-  
-        if (other.gameObject.tag == "wawa")
+        Debug.Log("entraaaaaaaaaaaa");
+        ParticleSystem ps = GetComponent<ParticleSystem>();
+        List<ParticleSystem.Particle> enterList = new List<ParticleSystem.Particle>();
+        int numEnter = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, enterList);
+        for (int i = 0; i < numEnter; i++)
+        {
+            ParticleSystem.Particle p = enterList[i];
             life -= 1;
+            Debug.Log("Life decreased, current life: " + life);
+
             if (life <= 0)
             {
-    
-              Destroy(this.gameObject);
-              Debug.Log("muere");
+                Destroy(this.gameObject);
+                Debug.Log("muere");
+                break; 
             }
-           
-        
+        }
+
     }
     private void OnTriggerStay(Collider other)
     {
