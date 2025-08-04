@@ -1,12 +1,18 @@
 fileFormatVersion: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 guid: 0a664991a390ead4280707831ccdea4c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     2186277476908879412: ImportLogs
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 guid: d5df6392b539d59469585030c7f67551
@@ -50,6 +56,10 @@ ModelImporter:
     9500000: //RootNode
     13700000: Eyes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> d60e10446bb3cdf38a048eb457640f0904a184fb
+>>>>>>> Stashed changes
 =======
 >>>>>>> d60e10446bb3cdf38a048eb457640f0904a184fb
 >>>>>>> Stashed changes
@@ -107,13 +117,19 @@ ModelImporter:
     useFileScale: 1
     previousCalculatedGlobalScale: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     hasPreviousCalculatedGlobalScale: 1
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
     hasPreviousCalculatedGlobalScale: 0
 =======
     hasPreviousCalculatedGlobalScale: 1
 >>>>>>> d60e10446bb3cdf38a048eb457640f0904a184fb
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   tangentSpace:
     normalSmoothAngle: 60
