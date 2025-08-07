@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -26,6 +27,9 @@ guid: b2e16bc98f1971a49988ac19d5ca949c
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+guid: b2e16bc98f1971a49988ac19d5ca949c
+>>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -43,6 +47,7 @@ ModelImporter:
     3300002: Plane
     4300000: arbol+texto
     4300002: Plane
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -96,7 +101,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -123,7 +128,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

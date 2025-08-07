@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -26,6 +27,9 @@ guid: d738f15d0ce9d6d419dc2898d5fe43bf
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+guid: d738f15d0ce9d6d419dc2898d5fe43bf
+>>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -1729,6 +1733,7 @@ ModelImporter:
     4300666: trigo.110
     4300668: Gasoil pist
     4300670: Plane
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -1781,8 +1786,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -1809,7 +1814,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

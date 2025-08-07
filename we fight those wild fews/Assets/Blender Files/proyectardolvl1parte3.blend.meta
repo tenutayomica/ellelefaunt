@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -26,6 +27,9 @@ guid: d78aa3c3375127446bf534bcf3f74bd5
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+guid: d78aa3c3375127446bf534bcf3f74bd5
+>>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -44,6 +48,7 @@ ModelImporter:
     3300002: Plane
     4300000: Plane
     4300002: Cylinder
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -97,7 +102,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -124,7 +129,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -11,11 +12,14 @@ fileFormatVersion: 2
 =======
 >>>>>>> Stashed changes
 <<<<<<< HEAD
+=======
+>>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
 guid: 81f571e42085a454e9a28f67ce0ac391
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     2186277476908879412: ImportLogs
+<<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -211,6 +215,8 @@ ModelImporter:
 =======
 >>>>>>> d60e10446bb3cdf38a048eb457640f0904a184fb
 >>>>>>> Stashed changes
+=======
+>>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -264,6 +270,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -291,6 +298,9 @@ ModelImporter:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+    hasPreviousCalculatedGlobalScale: 0
+>>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

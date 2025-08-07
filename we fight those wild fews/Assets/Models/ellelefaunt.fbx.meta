@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -26,6 +27,9 @@ guid: cad94194e74adff42bb445b53e328a0f
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+guid: cad94194e74adff42bb445b53e328a0f
+>>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -220,6 +224,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -244,6 +249,8 @@ ModelImporter:
     clipAnimations: []
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
     clipAnimations:
     - serializedVersion: 16
       name: FindClue
@@ -1085,6 +1092,7 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -1101,6 +1109,8 @@ ModelImporter:
 =======
 >>>>>>> d60e10446bb3cdf38a048eb457640f0904a184fb
 >>>>>>> Stashed changes
+=======
+>>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
     isReadable: 1
   meshes:
     lODScreenPercentages: []

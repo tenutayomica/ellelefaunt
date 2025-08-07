@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -26,6 +27,9 @@ guid: 085f27cba2d127d44ab4a994526928a4
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+guid: 085f27cba2d127d44ab4a994526928a4
+>>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -1680,6 +1684,7 @@ ModelImporter:
     4300648: Cube
     4300650: Cube.001
     4300652: Cube.002
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -1733,7 +1738,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -1760,7 +1765,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
