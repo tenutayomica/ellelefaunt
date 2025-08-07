@@ -4,6 +4,7 @@ fileFormatVersion: 2
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
@@ -14,11 +15,14 @@ fileFormatVersion: 2
 <<<<<<< HEAD
 =======
 >>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
+=======
+>>>>>>> Stashed changes
 guid: 0a664991a390ead4280707831ccdea4c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     2186277476908879412: ImportLogs
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -29,6 +33,9 @@ ModelImporter:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
 =======
 >>>>>>> Stashed changes
 guid: d5df6392b539d59469585030c7f67551
@@ -75,6 +82,7 @@ ModelImporter:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 >>>>>>> d60e10446bb3cdf38a048eb457640f0904a184fb
 >>>>>>> Stashed changes
@@ -89,6 +97,9 @@ ModelImporter:
 >>>>>>> Stashed changes
 =======
 >>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
+=======
+>>>>>>> d60e10446bb3cdf38a048eb457640f0904a184fb
+>>>>>>> Stashed changes
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -147,6 +158,7 @@ ModelImporter:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     hasPreviousCalculatedGlobalScale: 1
 =======
 =======
@@ -156,10 +168,13 @@ ModelImporter:
 =======
 >>>>>>> Stashed changes
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
     hasPreviousCalculatedGlobalScale: 0
 =======
     hasPreviousCalculatedGlobalScale: 1
 >>>>>>> d60e10446bb3cdf38a048eb457640f0904a184fb
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -173,6 +188,8 @@ ModelImporter:
 =======
     hasPreviousCalculatedGlobalScale: 0
 >>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
+=======
+>>>>>>> Stashed changes
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
