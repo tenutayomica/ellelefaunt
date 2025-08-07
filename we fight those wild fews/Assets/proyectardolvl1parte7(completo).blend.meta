@@ -5,6 +5,7 @@ fileFormatVersion: 2
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 guid: 085f27cba2d127d44ab4a994526928a4
 =======
 =======
@@ -16,10 +17,13 @@ guid: 085f27cba2d127d44ab4a994526928a4
 <<<<<<< HEAD
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 guid: bb4ef5e7ff1c5c14d8f0a3e88a2ada25
 =======
 guid: 085f27cba2d127d44ab4a994526928a4
 >>>>>>> d60e10446bb3cdf38a048eb457640f0904a184fb
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -34,6 +38,8 @@ guid: 085f27cba2d127d44ab4a994526928a4
 =======
 guid: 085f27cba2d127d44ab4a994526928a4
 >>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 ModelImporter:
@@ -1691,7 +1697,10 @@ ModelImporter:
     4300650: Cube.001
     4300652: Cube.002
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     9500000: //RootNode
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   externalObjects: {}
@@ -1748,7 +1757,11 @@ ModelImporter:
     useFileScale: 1
     previousCalculatedGlobalScale: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     hasPreviousCalculatedGlobalScale: 1
+=======
+    hasPreviousCalculatedGlobalScale: 0
+>>>>>>> Stashed changes
 =======
     hasPreviousCalculatedGlobalScale: 0
 >>>>>>> Stashed changes
@@ -1779,7 +1792,11 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   animationType: 2
+=======
+  animationType: 0
+>>>>>>> Stashed changes
 =======
   animationType: 0
 >>>>>>> Stashed changes
