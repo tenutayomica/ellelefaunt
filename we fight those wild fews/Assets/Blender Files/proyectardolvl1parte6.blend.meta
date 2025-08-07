@@ -1,59 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 guid: 37ba34cf66b35e54e8d1cff8ecf89e7b
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-guid: af7184ce25a9e33479ebc5db59cfeb92
-=======
-guid: 37ba34cf66b35e54e8d1cff8ecf89e7b
->>>>>>> d60e10446bb3cdf38a048eb457640f0904a184fb
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
-guid: 37ba34cf66b35e54e8d1cff8ecf89e7b
->>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -63,19 +9,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Plane
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     9500000: //RootNode
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -129,23 +63,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     hasPreviousCalculatedGlobalScale: 1
-=======
-    hasPreviousCalculatedGlobalScale: 0
->>>>>>> Stashed changes
-=======
-    hasPreviousCalculatedGlobalScale: 0
->>>>>>> Stashed changes
-=======
-    hasPreviousCalculatedGlobalScale: 0
->>>>>>> Stashed changes
-=======
-    hasPreviousCalculatedGlobalScale: 0
->>>>>>> Stashed changes
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -172,23 +90,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   animationType: 2
-=======
-  animationType: 0
->>>>>>> Stashed changes
-=======
-  animationType: 0
->>>>>>> Stashed changes
-=======
-  animationType: 0
->>>>>>> Stashed changes
-=======
-  animationType: 0
->>>>>>> Stashed changes
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
