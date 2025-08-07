@@ -6,6 +6,7 @@ fileFormatVersion: 2
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 guid: d738f15d0ce9d6d419dc2898d5fe43bf
 =======
 =======
@@ -19,10 +20,13 @@ guid: d738f15d0ce9d6d419dc2898d5fe43bf
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 guid: 40f34d3e5a30a5a44b1a895675141ce5
 =======
 guid: d738f15d0ce9d6d419dc2898d5fe43bf
 >>>>>>> d60e10446bb3cdf38a048eb457640f0904a184fb
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -38,6 +42,8 @@ guid: d738f15d0ce9d6d419dc2898d5fe43bf
 =======
 guid: d738f15d0ce9d6d419dc2898d5fe43bf
 >>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -1747,7 +1753,10 @@ ModelImporter:
     4300670: Plane
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     9500000: //RootNode
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -1806,8 +1815,13 @@ ModelImporter:
     useFileScale: 1
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
+=======
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+>>>>>>> Stashed changes
 =======
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
@@ -1844,7 +1858,11 @@ ModelImporter:
   lastHumanDescriptionAvatarSource: {instanceID: 0}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   animationType: 2
+=======
+  animationType: 0
+>>>>>>> Stashed changes
 =======
   animationType: 0
 >>>>>>> Stashed changes

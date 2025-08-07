@@ -6,6 +6,7 @@ fileFormatVersion: 2
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 guid: d78aa3c3375127446bf534bcf3f74bd5
 =======
 =======
@@ -19,10 +20,13 @@ guid: d78aa3c3375127446bf534bcf3f74bd5
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 guid: 6268cd5da728fb645b0f8704df426ec9
 =======
 guid: d78aa3c3375127446bf534bcf3f74bd5
 >>>>>>> d60e10446bb3cdf38a048eb457640f0904a184fb
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -38,6 +42,8 @@ guid: d78aa3c3375127446bf534bcf3f74bd5
 =======
 guid: d78aa3c3375127446bf534bcf3f74bd5
 >>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -62,7 +68,10 @@ ModelImporter:
     4300002: Cylinder
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     9500000: //RootNode
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -122,7 +131,11 @@ ModelImporter:
     previousCalculatedGlobalScale: 1
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     hasPreviousCalculatedGlobalScale: 1
+=======
+    hasPreviousCalculatedGlobalScale: 0
+>>>>>>> Stashed changes
 =======
     hasPreviousCalculatedGlobalScale: 0
 >>>>>>> Stashed changes
@@ -157,7 +170,11 @@ ModelImporter:
   lastHumanDescriptionAvatarSource: {instanceID: 0}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   animationType: 2
+=======
+  animationType: 0
+>>>>>>> Stashed changes
 =======
   animationType: 0
 >>>>>>> Stashed changes
