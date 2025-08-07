@@ -7,6 +7,7 @@ fileFormatVersion: 2
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 guid: 082807d59d3697849a72aed93aec4baf
 =======
 =======
@@ -16,6 +17,8 @@ guid: 082807d59d3697849a72aed93aec4baf
 =======
 >>>>>>> Stashed changes
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -32,6 +35,7 @@ guid: 082807d59d3697849a72aed93aec4baf
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -42,6 +46,8 @@ guid: 082807d59d3697849a72aed93aec4baf
 =======
 guid: 082807d59d3697849a72aed93aec4baf
 >>>>>>> 314b7d09c008fb0b589a478d3ace7374fead2d86
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -79,7 +85,10 @@ ModelImporter:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     9500000: //RootNode
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -143,7 +152,11 @@ ModelImporter:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     hasPreviousCalculatedGlobalScale: 1
+=======
+    hasPreviousCalculatedGlobalScale: 0
+>>>>>>> Stashed changes
 =======
     hasPreviousCalculatedGlobalScale: 0
 >>>>>>> Stashed changes
@@ -182,7 +195,11 @@ ModelImporter:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   animationType: 2
+=======
+  animationType: 0
+>>>>>>> Stashed changes
 =======
   animationType: 0
 >>>>>>> Stashed changes
