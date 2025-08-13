@@ -7,7 +7,7 @@ public class VictimScript : MonoBehaviour
 {
     public List<GameObject> Obstacles;
     public Transform Destination;
-    bool safe = false;
+    public bool safe = false;
     public NavMeshAgent agent;
 
 
