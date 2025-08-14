@@ -15,10 +15,13 @@ public class ThirdPersonMovement : MonoBehaviour
     public float turnSmoothTime;
     float turnSmoothVelocity;
     bool walk;
+    public bool grounded;
 
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
+        if (Physics.Raycast(this.gameObject.transform.position, Vector3.down, 1f)) grounded = true;
+        else grounded = false;
+            float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
@@ -42,7 +45,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
 
 
-        if (cont.isGrounded && Input.GetKeyDown(KeyCode.Space))
+        if (grounded && Input.GetKeyDown(KeyCode.Space))
         {
             verticalVelocity = jumpForce;
             ani.SetTrigger("Jump");
@@ -60,7 +63,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (verticalVelocity <= -20) verticalVelocity = -20;
 
-        if (cont.isGrounded) ani.SetBool("Grounded", true);
+        if (grounded) ani.SetBool("Grounded", true);
         else ani.SetBool("Grounded", false);
 
     }
