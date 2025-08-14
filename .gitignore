@@ -3,13 +3,13 @@
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
 .utmp/
-we fight those wild fews/Library/
-we fight those wild fews/[Tt]emp/
-we fight those wild fews/[Oo]bj/
-we fight those wild fews/[Bb]uild/
-we fight those wild fews/[Bb]uilds/
-we fight those wild fews/[Ll]ogs/
-we fight those wild fews/[Uu]ser[Ss]ettings/
+/we fight those wild fews/Library/
+/we fight those wild fews/[Tt]emp/
+/we fight those wild fews/[Oo]bj/
+/we fight those wild fews/[Bb]uild/
+/we fight those wild fews/[Bb]uilds/
+/we fight those wild fews/[Ll]ogs/
+/we fight those wild fews/[Uu]ser[Ss]ettings/
 *.log
 
 # MemoryCaptures can get excessive in size.
