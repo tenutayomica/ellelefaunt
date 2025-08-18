@@ -9408,6 +9408,7 @@ GameObject:
   - component: {fileID: 7539917662225958138}
   - component: {fileID: 6597832918132899262}
   - component: {fileID: 2671895463648369903}
+  - component: {fileID: 54514584607472654}
   m_Layer: 0
   m_Name: FIRE BIG
   m_TagString: Untagged
@@ -9464,6 +9465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d931b95ba4998e498c8957a2e275573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: 1
 --- !u!198 &6597832918132899262
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -14129,3 +14131,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!54 &54514584607472654
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539917662225958137}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
