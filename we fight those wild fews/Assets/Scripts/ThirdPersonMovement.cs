@@ -19,7 +19,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Update()
     {
-        if (Physics.Raycast(this.gameObject.transform.position, Vector3.down, 1f)) grounded = true;
+        if (Physics.Raycast(this.gameObject.transform.position, Vector3.down, 1.5f)) grounded = true;
         else grounded = false;
             float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
