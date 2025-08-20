@@ -27,5 +27,7 @@ public class ContadorScript : MonoBehaviour
         currentFires = firesTotal - Fires.Count;
         foreach (GameObject rescue in Victims) if (rescue.GetComponent<VictimScript>().safe) Victims.Remove(rescue);
         currentRescues = rescuesTotal - Victims.Count;
+        foreach (GameObject clue in Clues) if (clue.GetComponent<Outline>().seen) Clues.Remove(clue);
+        currentClues = cluesTotal - Clues.Count;
     }
 }

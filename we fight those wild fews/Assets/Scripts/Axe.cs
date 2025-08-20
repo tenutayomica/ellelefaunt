@@ -13,8 +13,20 @@ public class Axe : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            ani.SetTrigger("Axe");
+            Collider[] checkClue = Physics.OverlapSphere(hitbox.position, axeRange);
+            foreach (Collider other in checkClue)
+            {
+                if (other.gameObject.CompareTag("Clue"))
+                {
+                    ani.SetTrigger("Clue");
+                    other.GetComponent<Outline>().seen = true;
+                    other.GetComponent<Outline>().OutlineColor = Color.black;
+                    StartCoroutine(ClueAnimWaittime());
+                    return;
+                }
+            }
             StartCoroutine(AxeAttack());
+            ani.SetTrigger("Axe");
         }
     }
     IEnumerator AxeAttack()
@@ -26,4 +38,12 @@ public class Axe : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+    IEnumerator ClueAnimWaittime()
+    {
+        float speedHold = this.gameObject.GetComponent<ThirdPersonMovement>().speed;
+        this.gameObject.GetComponent<ThirdPersonMovement>().speed = 0;
+        yield return new WaitForSeconds(3f);
+        this.gameObject.GetComponent<ThirdPersonMovement>().speed = speedHold;
+    }
+            
 }
