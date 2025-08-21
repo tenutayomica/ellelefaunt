@@ -8,39 +8,45 @@ public class enemy : MonoBehaviour
    [Range(0,50)] [SerializeField] float attackRange = 5, sightRange = 20, timeBetweenAtacks = 3;
     Vector3 playerPos;
     private NavMeshAgent thisEnemy;
-    private bool isAttacking; 
+    private bool isAttacking;
+    GameObject playerGO;
     private void Start()
     {
         thisEnemy = GetComponent<NavMeshAgent>();
-        
+        playerGO = GameObject.FindGameObjectWithTag("Player");
+
     }
     private void Update()
     {
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+        //thisEnemy.SetDestination(playerPos);
+        playerPos = playerGO.transform.position;
         float distanceFromPlayer = Vector3.Distance(playerPos, this.transform.position);
-        if(distanceFromPlayer<=sightRange && distanceFromPlayer > attackRange)
+        if (distanceFromPlayer <= sightRange && distanceFromPlayer > attackRange)
         {
-            isAttacking = false;
-            StopAllCoroutines();
-            ChasePlayer();
-            thisEnemy.isStopped = false; 
+            if(thisEnemy.isStopped)
+                ChasePlayer();
         }
-        if(distanceFromPlayer <= sightRange && !isAttacking)
+        if (distanceFromPlayer <= sightRange && !isAttacking)
         {
-            thisEnemy.isStopped = true;
-            StartCoroutine(AttackPlayer()); 
+            if(!isAttacking)
+                StartCoroutine(AttackPlayer());
         }
     }
     private void ChasePlayer()
     {
+        Debug.LogWarning("i chase");
+        StopAllCoroutines();
+        isAttacking = false;
+        thisEnemy.isStopped = false;
         thisEnemy.SetDestination(playerPos);
     }
     private IEnumerator AttackPlayer()
     {
+        thisEnemy.isStopped = true;
         isAttacking = true;
         yield return new WaitForSeconds(timeBetweenAtacks);
         Debug.Log("hurt");
-        isAttacking = false; 
+        isAttacking = false;    
     }
     private void OnDrawGizmosSelected()
     {
