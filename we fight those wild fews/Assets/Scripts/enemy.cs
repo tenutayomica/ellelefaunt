@@ -10,6 +10,7 @@ public class enemy : MonoBehaviour
     private NavMeshAgent thisEnemy;
     private bool isAttacking;
     GameObject playerGO;
+    float distanceFromPlayer;
     private void Start()
     {
         thisEnemy = GetComponent<NavMeshAgent>();
@@ -20,7 +21,7 @@ public class enemy : MonoBehaviour
     {
         //thisEnemy.SetDestination(playerPos);
         playerPos = playerGO.transform.position;
-        float distanceFromPlayer = Vector3.Distance(playerPos, this.transform.position);
+        distanceFromPlayer = Vector3.Distance(playerPos, this.transform.position);
         if (distanceFromPlayer <= sightRange && distanceFromPlayer > attackRange)
         {
             if(thisEnemy.isStopped)
@@ -36,9 +37,9 @@ public class enemy : MonoBehaviour
     {
         Debug.LogWarning("i chase");
         StopAllCoroutines();
-        isAttacking = false;
-        thisEnemy.isStopped = false;
-        thisEnemy.SetDestination(playerPos);
+        //isAttacking = false;
+        //thisEnemy.isStopped = false;
+        thisEnemy.destination = playerPos;
     }
     private IEnumerator AttackPlayer()
     {
