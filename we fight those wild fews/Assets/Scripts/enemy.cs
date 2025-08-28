@@ -51,7 +51,7 @@ public class enemy : MonoBehaviour
         StopAllCoroutines();
         isAttacking = false;
         thisEnemy.isStopped = false;
-        thisEnemy.destination = playerPos;
+        thisEnemy.SetDestination(playerPos);
         Debug.LogWarning("i chase");
     }
     private IEnumerator AttackPlayer()
