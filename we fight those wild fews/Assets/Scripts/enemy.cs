@@ -13,7 +13,7 @@ public class enemy : MonoBehaviour
     float distanceFromPlayer;
     public Vector3 inicio;
     public Vector3 fin;
-    Vector3 movlin;
+    Vector3 patrolDestination;
     public float speed = 5f; 
     private void Start()
     {
@@ -21,29 +21,30 @@ public class enemy : MonoBehaviour
         playerGO = GameObject.FindGameObjectWithTag("Player");
         inicio = new Vector3(2, 2, 30);
         fin = new Vector3(2, 2, 40);
-        movlin = fin; 
+        patrolDestination = inicio; 
+
 
 
     }
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, movlin, speed * Time.deltaTime);
-        //thisEnemy.SetDestination(playerPos);
         playerPos = playerGO.transform.position;
-        distanceFromPlayer = Vector3.Distance(playerPos, this.transform.position);
-        if (distanceFromPlayer > sightRange && distanceFromPlayer> attackRange)
+        distanceFromPlayer = Vector3.Distance(playerPos, transform.position);
+
+        if (distanceFromPlayer <= attackRange)
+        {
+            if (!isAttacking)
+            {
+                StartCoroutine(AttackPlayer());
+            }
+        }
+        else if (distanceFromPlayer <= sightRange)
+        {
+            ChasePlayer();
+        }
+        else
         {
             stroll();
-        }
-        if (distanceFromPlayer <= sightRange && distanceFromPlayer > attackRange)
-        {
-            
-                ChasePlayer();
-        }
-        if (distanceFromPlayer <= attackRange && !isAttacking)
-        {
-            if(!isAttacking)
-                StartCoroutine(AttackPlayer());
         }
     }
     private void ChasePlayer()
@@ -51,7 +52,7 @@ public class enemy : MonoBehaviour
         StopAllCoroutines();
         isAttacking = false;
         thisEnemy.isStopped = false;
-        thisEnemy.destination = playerPos;
+        thisEnemy.SetDestination(playerPos);
         Debug.LogWarning("i chase");
     }
     private IEnumerator AttackPlayer()
@@ -59,8 +60,10 @@ public class enemy : MonoBehaviour
         thisEnemy.isStopped = true;
         isAttacking = true;
         yield return new WaitForSeconds(timeBetweenAtacks);
-        Debug.Log("hurt");
-        isAttacking = false;    
+        Debug.Log("The player gets hurt!");
+        isAttacking = false;
+        // After attacking, resume movement
+        thisEnemy.isStopped = false;
     }
     private void OnDrawGizmosSelected()
     {
@@ -72,11 +75,12 @@ public class enemy : MonoBehaviour
     }
     private void stroll()
     {
-        if (Vector3.Distance(transform.position, movlin) < 1.0f)
+        // Check if the enemy has reached its patrol destination
+        if (!thisEnemy.pathPending && thisEnemy.remainingDistance < 0.5f)
         {
-            movlin = (movlin == inicio) ? fin : inicio;
-            thisEnemy.SetDestination(movlin);
+            // Switch the patrol destination
+            patrolDestination = (patrolDestination == inicio) ? fin : inicio;
+            thisEnemy.SetDestination(patrolDestination);
         }
-        thisEnemy.SetDestination(movlin);
     }
 }
