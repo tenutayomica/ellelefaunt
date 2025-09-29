@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class PropulsionCheck : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool propulsing;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerStay(Collider other)
     {
-        
+        if (other.gameObject.tag == "Ground")
+        {
+            propulsing = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Ground")
+        {
+            propulsing = true;
+        }
     }
 }
