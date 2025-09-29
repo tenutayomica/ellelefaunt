@@ -17,6 +17,7 @@ public class VictimScript : MonoBehaviour
         foreach (GameObject Obstaculo in Obstacles) if (Obstaculo == null) Obstacles.Remove(Obstaculo);
         if (Obstacles.Count == 0) safe = true;
         if (safe) ani.SetBool("InDanger", false);
+        else ani.SetBool("InDanger", true);
         if (safe) agent.destination = Destination.position;
     }
 
