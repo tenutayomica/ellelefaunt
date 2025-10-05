@@ -18,6 +18,8 @@ public class ContadorScript : MonoBehaviour
     public Text victimsScore;
     public Text cluesScore;
     public GameObject winPanel;
+    public Animator ani;
+    bool win = false;
 
     void Start()
     {
@@ -34,12 +36,21 @@ public class ContadorScript : MonoBehaviour
         currentRescues = rescuesTotal - Victims.Count;
         foreach (GameObject clue in Clues) if (clue.GetComponent<Outline>().seen) Clues.Remove(clue);
         currentClues = cluesTotal - Clues.Count;
-        if (currentClues == cluesTotal && !winPanel.activeInHierarchy)
+        if (currentClues == cluesTotal && !winPanel.activeInHierarchy && !win)
         {
-            winPanel.SetActive(true);
-            firesScore.text = currentFires.ToString() + "/" + firesTotal.ToString();
-            victimsScore.text = currentRescues.ToString() + "/" + rescuesTotal.ToString();
-            cluesScore.text = currentClues.ToString() + "/" + cluesTotal.ToString();
+            win = true;
+            StartCoroutine(Win());
         }
+    }
+
+    IEnumerator Win()
+    {
+        ani.SetTrigger("Win");
+        GameObject.Find("Trompita").GetComponent<ThirdPersonMovement>().locked = true;
+        yield return new WaitForSeconds(3.5f);
+        winPanel.SetActive(true);
+        firesScore.text = currentFires.ToString() + "/" + firesTotal.ToString();
+        victimsScore.text = currentRescues.ToString() + "/" + rescuesTotal.ToString();
+        cluesScore.text = currentClues.ToString() + "/" + cluesTotal.ToString();
     }
 }

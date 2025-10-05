@@ -20,10 +20,10 @@ public class Axe : MonoBehaviour
             {
                 if (other.gameObject.CompareTag("Clue"))
                 {
-                    ani.SetTrigger("Clue");
+                    if (GameObject.Find("Contador").GetComponent<ContadorScript>().Clues.Count != 1) ani.SetTrigger("Clue");
                     other.GetComponent<Outline>().seen = true;
                     other.GetComponent<Outline>().OutlineColor = Color.black;
-                    StartCoroutine(ClueAnimWaittime());
+                    if (GameObject.Find("Contador").GetComponent<ContadorScript>().Clues.Count != 1) StartCoroutine(ClueAnimWaittime());
                     return;
                 }
             }
