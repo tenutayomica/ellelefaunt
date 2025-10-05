@@ -8,11 +8,13 @@ public class Axe : MonoBehaviour
     public float axeRange;
     public LayerMask breakLayer;
     public Animator ani;
+    bool axing = false;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && !axing)
         {
+            axing = true;
             Collider[] checkClue = Physics.OverlapSphere(hitbox.position, axeRange);
             foreach (Collider other in checkClue)
             {
@@ -37,13 +39,14 @@ public class Axe : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+        axing = false;
     }
     IEnumerator ClueAnimWaittime()
     {
-        float speedHold = this.gameObject.GetComponent<ThirdPersonMovement>().speed;
-        this.gameObject.GetComponent<ThirdPersonMovement>().speed = 0;
-        yield return new WaitForSeconds(3f);
-        this.gameObject.GetComponent<ThirdPersonMovement>().speed = speedHold;
+        this.gameObject.GetComponent<ThirdPersonMovement>().locked = true;
+        yield return new WaitForSeconds(3.5f);
+        this.gameObject.GetComponent<ThirdPersonMovement>().locked = false;
+        axing = false;
     }
             
 }

@@ -11,11 +11,16 @@ public class HealthManager : MonoBehaviour
     public bool iframes = false;
     public float IFlen;
     public Text[] hpd;
+    bool dead = false;
 
     void Update()
     {
-        if (HP <= 0) GetComponentInParent < DeathManager >().Muerte();
-        if (HP < pastHP) StartCoroutine(Iframes());
+        if (HP <= 0 && !dead)
+        {
+            dead = true;
+            GetComponentInParent<DeathManager>().Muerte();
+        }
+        if (HP < pastHP && HP > 0) StartCoroutine(Iframes());
         pastHP = HP;
         if (HP == 0)
         {
@@ -45,7 +50,11 @@ public class HealthManager : MonoBehaviour
 
     IEnumerator Iframes()
     {
+        this.gameObject.GetComponent<ThirdPersonMovement>().ani.SetTrigger("Hurt");
         iframes = true;
+        this.gameObject.GetComponent<ThirdPersonMovement>().locked = true;
+        yield return new WaitForSeconds(1.5f);
+        this.gameObject.GetComponent<ThirdPersonMovement>().locked = false;
         yield return new WaitForSeconds(IFlen);
         iframes = false;
     }

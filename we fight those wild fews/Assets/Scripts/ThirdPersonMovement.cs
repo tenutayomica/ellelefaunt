@@ -16,6 +16,7 @@ public class ThirdPersonMovement : MonoBehaviour
     float turnSmoothVelocity;
     bool walk;
     public bool grounded;
+    public bool locked = false;
 
     void Update()
     {
@@ -25,7 +26,7 @@ public class ThirdPersonMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-        if (direction.magnitude >= 0.1f)
+        if (direction.magnitude >= 0.1f && !locked)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
@@ -45,7 +46,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
 
 
-        if (grounded && Input.GetKeyDown(KeyCode.Space))
+        if (grounded && Input.GetKeyDown(KeyCode.Space) && !locked)
         {
             verticalVelocity = jumpForce;
             ani.SetTrigger("Jump");

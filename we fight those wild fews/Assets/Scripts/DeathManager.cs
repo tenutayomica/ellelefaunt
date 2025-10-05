@@ -6,6 +6,7 @@ public class DeathManager : MonoBehaviour
 {
     public void Muerte()
     {
-        Destroy(this.gameObject);
+        this.gameObject.GetComponent<ThirdPersonMovement>().locked = true;
+        this.gameObject.GetComponent<ThirdPersonMovement>().ani.SetTrigger("Death");
     }
 }
