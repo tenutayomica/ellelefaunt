@@ -9465,7 +9465,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d931b95ba4998e498c8957a2e275573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 1
+  life: 3
+  flames: []
+  lifetimes: []
 --- !u!198 &6597832918132899262
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -9549,7 +9551,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 6.62
+      scalar: 6.22
       minScalar: 5
       maxCurve:
         serializedVersion: 2
