@@ -14,6 +14,7 @@ public class Axe : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && !axing)
         {
+            GetComponentInChildren<wawa>().dryActivity = true;
             axing = true;
             Collider[] checkClue = Physics.OverlapSphere(hitbox.position, axeRange);
             foreach (Collider other in checkClue)

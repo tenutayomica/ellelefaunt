@@ -19,6 +19,7 @@ public class HealthManager : MonoBehaviour
         {
             dead = true;
             GetComponentInParent<DeathManager>().Muerte();
+            GetComponentInChildren<wawa>().dryActivity = true; 
         }
         if (HP < pastHP && HP > 0) StartCoroutine(Iframes());
         pastHP = HP;

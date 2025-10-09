@@ -10,22 +10,25 @@ public class wawa : MonoBehaviour
     public int watermin = 0;
     public bool inWater = false;
     public Animator ani;
+    public healthBarScript waterbar;
+    public bool dryActivity; 
     // Start is called before the first frame update
     void Start()
     {
         water.Stop();
+        waterbar.SetWater(watermin);
     }
   
     
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(1) && inWater==true)
+        if (Input.GetMouseButton(1) && inWater==true && dryActivity==false)
         {
             if(watermeter<watermax)
             {
                 watermeter += 2; 
-                Debug.Log(watermeter);
+                Debug.Log("filling");
             }
             ani.SetBool("Sucking", true);
         }
@@ -38,7 +41,7 @@ public class wawa : MonoBehaviour
 
 
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1") && dryActivity == false)
         {
             ani.SetBool("Shooting", true);
                 if(watermeter>watermin)
@@ -60,6 +63,7 @@ public class wawa : MonoBehaviour
             ani.SetBool("Shooting", false);
             water.Stop();
         }
+        waterbar.SetWater(watermeter);
         
     }
 }
