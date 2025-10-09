@@ -21,7 +21,7 @@ public class Fire : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<HealthManager>().iframes == false && life >= 0)
+        if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<HealthManager>().iframes == false && life > 0)
         {
             other.gameObject.GetComponent<HealthManager>().HP -= 1;
         }
@@ -56,18 +56,6 @@ public class Fire : MonoBehaviour
                     mainOne.startLifetime = oneCurve;
                     ParticleSystem.MainModule mainTwo = flames[2].main;
                     ParticleSystem.MinMaxCurve twoCurve = new ParticleSystem.MinMaxCurve(0.5f);
-                    mainTwo.startLifetime = twoCurve;
-                    }
-                    if (life == -1)
-                    {
-                    ParticleSystem.MainModule mainZero = flames[0].main;
-                    ParticleSystem.MinMaxCurve zeroCurve = new ParticleSystem.MinMaxCurve(1.5f);
-                    mainZero.startLifetime = zeroCurve;
-                    ParticleSystem.MainModule mainOne = flames[1].main;
-                    ParticleSystem.MinMaxCurve oneCurve = new ParticleSystem.MinMaxCurve(0.5f);
-                    mainOne.startLifetime = oneCurve;
-                    ParticleSystem.MainModule mainTwo = flames[2].main;
-                    ParticleSystem.MinMaxCurve twoCurve = new ParticleSystem.MinMaxCurve(0.25f);
                     mainTwo.startLifetime = twoCurve;
                     }
                     if (life == 0)
