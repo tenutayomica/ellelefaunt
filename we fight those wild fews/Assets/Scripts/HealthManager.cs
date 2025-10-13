@@ -21,9 +21,10 @@ public class HealthManager : MonoBehaviour
             GetComponentInParent<DeathManager>().Muerte();
             GetComponentInChildren<wawa>().dryActivity = true; 
         }
+        if (HP < pastHP) if (HP != pastHP -1) HP += 1;
         if (HP < pastHP && HP > 0) StartCoroutine(Iframes());
         pastHP = HP;
-        if (HP == 0)
+        if (HP <= 0)
         {
             hpd[0].color = Color.black;
             hpd[1].color = Color.black;
