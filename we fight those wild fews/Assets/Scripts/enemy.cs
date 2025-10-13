@@ -17,9 +17,9 @@ public class enemy : MonoBehaviour
     public float speed = 5f;
     [SerializeField] private float timer = 5;
     private float bulletTime;
-    public GameObject projectile;
+    public GameObject enemyProjectile;
     public Transform spawnPoint;
-    
+
     private void Start()
     {
         thisEnemy = GetComponent<NavMeshAgent>();
@@ -66,15 +66,19 @@ public class enemy : MonoBehaviour
         isAttacking = true;
         yield return new WaitForSeconds(timeBetweenAtacks);
         Debug.Log("The player gets hurt!");
-        bulletTime -= Time.deltaTime;
-        //if (bulletTime > 0) return;
-        bulletTime = timer;
-        GameObject projectileobj = Instantiate(projectile, spawnPoint.transform.position, spawnPoint.transform.rotation) as GameObject;
-        Rigidbody projectilerig = projectileobj.GetComponent<Rigidbody>();
-        projectilerig.AddForce(projectilerig.transform.forward * speed);
-        Destroy(projectileobj, 0.1f);
+        shoot();
         isAttacking = false;
         thisEnemy.isStopped = false;
+    }
+    void shoot()
+    {
+        bulletTime -= Time.deltaTime;
+        if (bulletTime > 0) return;
+        bulletTime = timer;
+        GameObject projectileObj = Instantiate(enemyProjectile, spawnPoint.transform.position, spawnPoint.transform.rotation) as GameObject;
+        Rigidbody projectileRig = projectileObj.GetComponent<Rigidbody>();
+        projectileRig.AddForce(projectileRig.transform.forward * speed);
+        Destroy(projectileObj, 0.1f);
     }
     private void OnDrawGizmosSelected()
     {
