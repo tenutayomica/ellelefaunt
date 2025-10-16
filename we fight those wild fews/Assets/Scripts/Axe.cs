@@ -41,6 +41,7 @@ public class Axe : MonoBehaviour
             Destroy(other.gameObject);
         }
         axing = false;
+        GetComponentInChildren<wawa>().dryActivity = false;
     }
     IEnumerator ClueAnimWaittime()
     {

@@ -19,6 +19,7 @@ public class enemy : MonoBehaviour
     private float bulletTime;
     public GameObject enemyProjectile;
     public Transform spawnPoint;
+    public float force = 400; 
 
     private void Start()
     {
@@ -26,9 +27,7 @@ public class enemy : MonoBehaviour
         playerGO = GameObject.FindGameObjectWithTag("Player");
         inicio = new Vector3(2, 2, 30);
         fin = new Vector3(2, 2, 40);
-        patrolDestination = inicio; 
-
-
+        patrolDestination = inicio;
 
     }
     private void Update()
@@ -67,18 +66,19 @@ public class enemy : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenAtacks);
         Debug.Log("The player gets hurt!");
         shoot();
-        isAttacking = false;
+        //isAttacking = false;
         thisEnemy.isStopped = false;
     }
     void shoot()
     {
-        bulletTime -= Time.deltaTime;
-        if (bulletTime > 0) return;
+        //bulletTime -= Time.deltaTime;
+        //if (bulletTime > 0) return;
         bulletTime = timer;
         GameObject projectileObj = Instantiate(enemyProjectile, spawnPoint.transform.position, spawnPoint.transform.rotation) as GameObject;
+        Debug.LogError(projectileObj); 
         Rigidbody projectileRig = projectileObj.GetComponent<Rigidbody>();
-        projectileRig.AddForce(projectileRig.transform.forward * speed);
-        Destroy(projectileObj, 0.1f);
+        projectileRig.AddForce(projectileRig.transform.forward * force,ForceMode.Impulse);
+       // Destroy(projectileObj, 0.1f);
     }
     private void OnDrawGizmosSelected()
     {

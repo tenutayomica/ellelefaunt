@@ -10,7 +10,8 @@ public class othernamesrc : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Destroy(gameObject);
+            Debug.Log("destroyed by trompita");
         }
-    } //j
+    } 
 
 }

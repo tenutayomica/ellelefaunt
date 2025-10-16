@@ -17,12 +17,14 @@ public class wawa : MonoBehaviour
     {
         water.Stop();
         waterbar.SetWater(watermin);
+        inWater = false;
     }
   
     
     // Update is called once per frame
     void Update()
     {
+        waterbar.SetWater(watermeter);
         if (Input.GetMouseButton(1) && inWater==true && dryActivity==false)
         {
             if(watermeter<watermax)
@@ -63,7 +65,7 @@ public class wawa : MonoBehaviour
             ani.SetBool("Shooting", false);
             water.Stop();
         }
-        waterbar.SetWater(watermeter);
+        
         
     }
 }
