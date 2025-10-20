@@ -14,12 +14,12 @@ public class enemy : MonoBehaviour
     public Vector3 inicio;
     public Vector3 fin;
     Vector3 patrolDestination;
-    public float speed = 5f;
+    public float speed;
     [SerializeField] private float timer = 5;
     private float bulletTime;
     public GameObject enemyProjectile;
     public Transform spawnPoint;
-    public float force = 400; 
+    public float force; 
 
     private void Start()
     {
@@ -64,7 +64,7 @@ public class enemy : MonoBehaviour
         thisEnemy.isStopped = true;
         isAttacking = true;
         yield return new WaitForSeconds(timeBetweenAtacks);
-        Debug.Log("The player gets hurt!");
+
         shoot();
         //isAttacking = false;
         thisEnemy.isStopped = false;
@@ -75,7 +75,6 @@ public class enemy : MonoBehaviour
         //if (bulletTime > 0) return;
         bulletTime = timer;
         GameObject projectileObj = Instantiate(enemyProjectile, spawnPoint.transform.position, spawnPoint.transform.rotation) as GameObject;
-        Debug.LogError(projectileObj); 
         Rigidbody projectileRig = projectileObj.GetComponent<Rigidbody>();
         projectileRig.AddForce(projectileRig.transform.forward * force,ForceMode.Impulse);
        // Destroy(projectileObj, 0.1f);
