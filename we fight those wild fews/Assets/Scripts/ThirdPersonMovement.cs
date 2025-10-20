@@ -9,7 +9,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public float speed;
     public float jumpSpeed;
-    float verticalVelocity;
+    public float verticalVelocity;
     public float jumpForce;
     public Animator ani;
     public float turnSmoothTime;
@@ -17,10 +17,16 @@ public class ThirdPersonMovement : MonoBehaviour
     bool walk;
     public bool grounded;
     public bool locked = false;
+    PropulsionCheck check;
+    public LayerMask groundLayer;
 
+    void Start()
+    {
+        check = GetComponentInChildren<PropulsionCheck>();
+    }
     void Update()
     {
-        if (Physics.Raycast(this.gameObject.transform.position, Vector3.down, 1.5f)) grounded = true;
+        if (Physics.Raycast(this.gameObject.transform.position, Vector3.down, 1.5f, groundLayer)) grounded = true;
         else grounded = false;
             float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
@@ -46,16 +52,16 @@ public class ThirdPersonMovement : MonoBehaviour
 
 
 
-        if (grounded && Input.GetKeyDown(KeyCode.Space) && !locked)
+        if (grounded && Input.GetKeyDown(KeyCode.Space) && !locked && !check.propulsing)
         {
             verticalVelocity = jumpForce;
             ani.SetTrigger("Jump");
         }
-        else if (cont.isGrounded)
+        else if (cont.isGrounded && !check.propulsing)
         {
             verticalVelocity = 0;
         }
-        else if (-2 < verticalVelocity && verticalVelocity < 3)
+        else if (-2 < verticalVelocity && verticalVelocity < 3 && !check.propulsing)
         {
             verticalVelocity += Physics.gravity.y / 24f;
 

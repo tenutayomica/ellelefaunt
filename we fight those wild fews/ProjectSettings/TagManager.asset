@@ -9,6 +9,7 @@ TagManager:
   - Extermination cube
   - Clue
   - waterBar
+  - Ground
   layers:
   - Default
   - TransparentFX
