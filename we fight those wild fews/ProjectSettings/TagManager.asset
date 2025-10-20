@@ -8,6 +8,7 @@ TagManager:
   - wawa source
   - Extermination cube
   - Clue
+  - waterBar
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Breakable
   - Fire
   - Floor
-  - 
+  - Clue
   - 
   - 
   - 
