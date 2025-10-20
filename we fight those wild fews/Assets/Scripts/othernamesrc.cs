@@ -9,8 +9,19 @@ public class othernamesrc : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
+            other.gameObject.GetComponent < HealthManager >().HP -= 1;
+            Destroy(this.gameObject);
             Debug.Log("destroyed by trompita");
+        }
+        if (other.gameObject.tag == "Extermination cube")
+        {
+            if (Input.GetButton("Fire1"))
+            {
+                if (GameObject.Find("wawa").GetComponent<wawa>().watermeter > 0)
+                {
+                    Destroy(this.gameObject);
+                }
+            }
         }
     } 
 
