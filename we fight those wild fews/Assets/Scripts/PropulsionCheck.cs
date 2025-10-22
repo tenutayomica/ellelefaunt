@@ -15,21 +15,22 @@ public class PropulsionCheck : MonoBehaviour
         TPM = GetComponentInParent<ThirdPersonMovement>();
     }
 
-    private void OnTriggerStay(Collider other)
+    void Update()
     {
-        Debug.Log("other noticed");
-        if (other.gameObject.tag == "Ground" && Input.GetKey(KeyCode.LeftShift) && !TPM.locked)
+        if (Physics.Raycast(this.gameObject.transform.position, Vector3.down, 3f, TPM.groundLayer))
         {
-            Debug.Log("propulsed");
-            propulsing = true;
-            TPM.verticalVelocity += PropulsionForce;
+            if (Input.GetKey(KeyCode.LeftShift) && TPM.locked == false)
+            {
+                Debug.Log("propulsed");
+                propulsing = true;
+                TPM.verticalVelocity += PropulsionForce;
+            }
+            else 
+            {
+                if (propulsing) TPM.verticalVelocity = 0;
+                propulsing = false;
+            }
         }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Ground")
-        {
-            propulsing = false;
-        }
+
     }
 }
