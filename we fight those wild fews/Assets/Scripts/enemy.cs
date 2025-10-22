@@ -19,8 +19,8 @@ public class enemy : MonoBehaviour
     private float bulletTime;
     public GameObject enemyProjectile;
     public Transform spawnPoint;
-    public float force; 
-
+    public float force;
+    Vector3 aim; 
     private void Start()
     {
         thisEnemy = GetComponent<NavMeshAgent>();
@@ -28,6 +28,7 @@ public class enemy : MonoBehaviour
         inicio = new Vector3(2, 2, 30);
         fin = new Vector3(2, 2, 40);
         patrolDestination = inicio;
+        
 
     }
     private void Update()
@@ -41,6 +42,7 @@ public class enemy : MonoBehaviour
             {
                 StartCoroutine(AttackPlayer());
             }
+            //ChasePlayer();
         }
         else if (distanceFromPlayer <= sightRange)
         {
@@ -61,13 +63,12 @@ public class enemy : MonoBehaviour
     }
     private IEnumerator AttackPlayer()
     {
-        thisEnemy.isStopped = true;
+        //thisEnemy.isStopped = true;
         isAttacking = true;
         yield return new WaitForSeconds(timeBetweenAtacks);
-
         shoot();
-        //isAttacking = false;
-        thisEnemy.isStopped = false;
+        isAttacking = false;
+        //thisEnemy.isStopped = false;
     }
     void shoot()
     {
@@ -89,10 +90,10 @@ public class enemy : MonoBehaviour
     }
     private void stroll()
     {
-        // Check if the enemy has reached its patrol destination
+        
         if (!thisEnemy.pathPending && thisEnemy.remainingDistance < 0.5f)
         {
-            // Switch the patrol destination
+            
             patrolDestination = (patrolDestination == inicio) ? fin : inicio;
             thisEnemy.SetDestination(patrolDestination);
         }
