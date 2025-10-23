@@ -28,9 +28,9 @@ public class Fire : MonoBehaviour
         if (other.gameObject.tag == "Extermination cube")
         {
             Debug.Log("entra");
-            if (Input.GetButton("Fire1"))
+            if (GameObject.Find("wawa").GetComponent<wawa>().watermeter > 0 && !GameObject.Find("wawa").GetComponent<wawa>().dryActivity)
             {
-                if( GameObject.Find("wawa").GetComponent<wawa>().watermeter > 0 && !iframes)
+                if( Input.GetButton("Fire1") && !iframes)
                 {
                     iframes = true;
                     life -= 1;

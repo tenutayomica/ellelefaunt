@@ -49,6 +49,7 @@ public class Axe : MonoBehaviour
         yield return new WaitForSeconds(3.5f);
         this.gameObject.GetComponent<ThirdPersonMovement>().locked = false;
         axing = false;
+        GetComponentInChildren<wawa>().dryActivity = false;
     }
             
 }

@@ -18,6 +18,7 @@ public class wawa : MonoBehaviour
         water.Stop();
         waterbar.SetWater(watermin);
         inWater = false;
+        
     }
   
     

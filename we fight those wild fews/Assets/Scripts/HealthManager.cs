@@ -15,13 +15,13 @@ public class HealthManager : MonoBehaviour
 
     void Update()
     {
+        if (HP < pastHP) if (HP != pastHP -1) HP = pastHP -1;
         if (HP <= 0 && !dead)
         {
             dead = true;
             GetComponentInParent<DeathManager>().Muerte();
             GetComponentInChildren<wawa>().dryActivity = true; 
         }
-        if (HP < pastHP) if (HP != pastHP -1) HP += 1;
         if (HP < pastHP && HP > 0) StartCoroutine(Iframes());
         pastHP = HP;
         if (HP <= 0)
