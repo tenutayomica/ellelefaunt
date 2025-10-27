@@ -9,6 +9,7 @@ public class othernamesrc : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            Debug.Log("hit");
             other.gameObject.GetComponent < HealthManager >().HP -= 1;
             Destroy(this.gameObject);
             Debug.Log("destroyed by trompita");

@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class enemy : MonoBehaviour
 {
-   [Range(0,50)] [SerializeField] float attackRange = 5, sightRange = 20, timeBetweenAtacks = 3;
+   [Range(0,50)] [SerializeField] float attackRange = 5, sightRange = 20, timeBetweenAtacks = 2;
     Vector3 playerPos;
     private NavMeshAgent thisEnemy;
     private bool isAttacking;
@@ -20,7 +20,8 @@ public class enemy : MonoBehaviour
     public GameObject enemyProjectile;
     public Transform spawnPoint;
     public float force;
-    Vector3 aim; 
+    Vector3 aim;
+   
     private void Start()
     {
         thisEnemy = GetComponent<NavMeshAgent>();
@@ -35,14 +36,17 @@ public class enemy : MonoBehaviour
     {
         playerPos = playerGO.transform.position;
         distanceFromPlayer = Vector3.Distance(playerPos, transform.position);
-
+        if(GetComponentInChildren<Fire>().life == 0)
+        {
+            Destroy(this.gameObject);
+        }
         if (distanceFromPlayer <= attackRange)
         {
             if (!isAttacking)
             {
                 StartCoroutine(AttackPlayer());
             }
-            //ChasePlayer();
+            
         }
         else if (distanceFromPlayer <= sightRange)
         {
