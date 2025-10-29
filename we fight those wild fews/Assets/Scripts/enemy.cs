@@ -11,8 +11,8 @@ public class enemy : MonoBehaviour
     private bool isAttacking;
     GameObject playerGO;
     float distanceFromPlayer;
-    public Vector3 inicio;
-    public Vector3 fin;
+    Vector3 inicio;
+    Vector3 fin;
     Vector3 patrolDestination;
     public float speed;
     [SerializeField] private float timer = 5;
@@ -21,16 +21,17 @@ public class enemy : MonoBehaviour
     public Transform spawnPoint;
     public float force;
     Vector3 aim;
-   
+    GameObject startGo;
+    GameObject endGo;
     private void Start()
     {
         thisEnemy = GetComponent<NavMeshAgent>();
         playerGO = GameObject.FindGameObjectWithTag("Player");
-        inicio = new Vector3(2, 2, 30);
-        fin = new Vector3(2, 2, 40);
+        startGo = GameObject.FindGameObjectWithTag("startPoint");
+        endGo = GameObject.FindGameObjectWithTag("endPoint");
+        inicio = startGo.transform.position;
+        fin = endGo.transform.position;
         patrolDestination = inicio;
-        
-
     }
     private void Update()
     {
@@ -42,11 +43,12 @@ public class enemy : MonoBehaviour
         }
         if (distanceFromPlayer <= attackRange)
         {
-            if (!isAttacking)
-            {
-                StartCoroutine(AttackPlayer());
-            }
-            
+            //if (!isAttacking)
+            //{
+               // StartCoroutine(AttackPlayer());
+            //}
+            StartCoroutine(AttackPlayer());
+
         }
         else if (distanceFromPlayer <= sightRange)
         {
@@ -60,7 +62,7 @@ public class enemy : MonoBehaviour
     private void ChasePlayer()
     {
         StopAllCoroutines();
-        isAttacking = false;
+        //isAttacking = false;
         thisEnemy.isStopped = false;
         thisEnemy.SetDestination(playerPos);
         Debug.LogWarning("i chase");
@@ -68,10 +70,10 @@ public class enemy : MonoBehaviour
     private IEnumerator AttackPlayer()
     {
         //thisEnemy.isStopped = true;
-        isAttacking = true;
+        //isAttacking = true;
         yield return new WaitForSeconds(timeBetweenAtacks);
         shoot();
-        isAttacking = false;
+        //isAttacking = false;
         //thisEnemy.isStopped = false;
     }
     void shoot()
