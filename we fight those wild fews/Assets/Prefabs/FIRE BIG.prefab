@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5144679735490073144}
   - component: {fileID: 6938372704958206070}
   - component: {fileID: 2726113100455610235}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: White FIre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4708,7 +4708,7 @@ GameObject:
   - component: {fileID: 9067350582078787884}
   - component: {fileID: 1454476775524182480}
   - component: {fileID: 3609724571360652355}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Yellow Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9409,7 +9409,7 @@ GameObject:
   - component: {fileID: 6597832918132899262}
   - component: {fileID: 2671895463648369903}
   - component: {fileID: 54514584607472654}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FIRE BIG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
