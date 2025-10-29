@@ -78,6 +78,59 @@ public class Fire : MonoBehaviour
             }
 
         }
+        if (other.gameObject.tag == "Propulsion cube")
+        {
+            Debug.Log("entra exter");
+            if (GameObject.Find("wawa").GetComponent<wawa>().watermeter > 0)
+            {
+                if (Input.GetKey(KeyCode.LeftShift) && !iframes)
+                {
+                    iframes = true;
+                    life -= 1;
+                    if (life == 2)
+                    {
+                        ParticleSystem.MainModule mainZero = flames[0].main;
+                        ParticleSystem.MinMaxCurve zeroCurve = new ParticleSystem.MinMaxCurve(4.5f);
+                        mainZero.startLifetime = zeroCurve;
+                        ParticleSystem.MainModule mainOne = flames[1].main;
+                        ParticleSystem.MinMaxCurve oneCurve = new ParticleSystem.MinMaxCurve(1.5f);
+                        mainOne.startLifetime = oneCurve;
+                        ParticleSystem.MainModule mainTwo = flames[2].main;
+                        ParticleSystem.MinMaxCurve twoCurve = new ParticleSystem.MinMaxCurve(0.75f);
+                        mainTwo.startLifetime = twoCurve;
+                    }
+                    if (life == 1)
+                    {
+                        ParticleSystem.MainModule mainZero = flames[0].main;
+                        ParticleSystem.MinMaxCurve zeroCurve = new ParticleSystem.MinMaxCurve(3f);
+                        mainZero.startLifetime = zeroCurve;
+                        ParticleSystem.MainModule mainOne = flames[1].main;
+                        ParticleSystem.MinMaxCurve oneCurve = new ParticleSystem.MinMaxCurve(1f);
+                        mainOne.startLifetime = oneCurve;
+                        ParticleSystem.MainModule mainTwo = flames[2].main;
+                        ParticleSystem.MinMaxCurve twoCurve = new ParticleSystem.MinMaxCurve(0.5f);
+                        mainTwo.startLifetime = twoCurve;
+                    }
+                    if (life == 0)
+                    {
+                        ParticleSystem.MainModule mainZero = flames[2].main;
+                        ParticleSystem.MinMaxCurve zeroCurve = new ParticleSystem.MinMaxCurve(0f);
+                        mainZero.startLifetime = zeroCurve;
+                        ParticleSystem.MainModule mainOne = flames[0].main;
+                        ParticleSystem.MinMaxCurve oneCurve = new ParticleSystem.MinMaxCurve(0f);
+                        mainOne.startLifetime = oneCurve;
+                        ParticleSystem.MainModule mainTwo = flames[1].main;
+                        ParticleSystem.MinMaxCurve twoCurve = new ParticleSystem.MinMaxCurve(0f);
+                        mainTwo.startLifetime = twoCurve;
+                    }
+
+                    StartCoroutine(Damage());
+                    Debug.Log("low");
+                }
+
+            }
+
+        }
         if (life <= 0)
         {
             StartCoroutine(Death());
