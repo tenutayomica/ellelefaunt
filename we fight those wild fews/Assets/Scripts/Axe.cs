@@ -9,10 +9,15 @@ public class Axe : MonoBehaviour
     public LayerMask breakLayer;
     public Animator ani;
     bool axing = false;
-    // Update is called once per frame
+    ThirdPersonMovement tpm;
+    void Start()
+    {
+        tpm = GetComponent<ThirdPersonMovement>();
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && !axing)
+        if (Input.GetKeyDown(KeyCode.F) && !axing && !tpm.locked)
         {
             GetComponentInChildren<wawa>().dryActivity = true;
             axing = true;

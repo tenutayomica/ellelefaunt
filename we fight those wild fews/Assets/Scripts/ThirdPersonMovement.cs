@@ -63,10 +63,10 @@ public class ThirdPersonMovement : MonoBehaviour
         }
         else if (-2 < verticalVelocity && verticalVelocity < 3 && !check.propulsing)
         {
-            verticalVelocity += Physics.gravity.y / 24f;
+            verticalVelocity += Physics.gravity.y * 3 * Time.deltaTime;
 
         }
-            verticalVelocity += Physics.gravity.y / 20f;
+            verticalVelocity += Physics.gravity.y * 2 * Time.deltaTime;
 
         if (verticalVelocity <= -20) verticalVelocity = -20;
 
