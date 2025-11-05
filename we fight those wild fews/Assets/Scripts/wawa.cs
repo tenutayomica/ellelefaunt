@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,7 +12,8 @@ public class wawa : MonoBehaviour
     public bool inWater = false;
     public Animator ani;
     public healthBarScript waterbar;
-    public bool dryActivity; 
+    public bool dryActivity;
+    public float trueWatermeter;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +32,8 @@ public class wawa : MonoBehaviour
         {
             if(watermeter<watermax)
             {
-                watermeter += 2; 
+                trueWatermeter += 75 * Time.deltaTime;
+                watermeter = Convert.ToInt32(trueWatermeter); 
                 Debug.Log("filling");
             }
             ani.SetBool("Sucking", true);
@@ -50,7 +53,8 @@ public class wawa : MonoBehaviour
                 if(watermeter>watermin)
                 {
                    water.Play(); 
-                   watermeter -= 1; 
+                   trueWatermeter -= 50 * Time.deltaTime;
+                   watermeter = Convert.ToInt32(trueWatermeter); 
                    
                 }
                 else{

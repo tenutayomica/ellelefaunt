@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using UnityEngine;
@@ -28,7 +29,8 @@ public class PropulsionCheck : MonoBehaviour
                 propulsing = true;
                 TPM.verticalVelocity += PropulsionForce;
                 TPM.ani.SetBool("Propulsing", true);
-                AguaScript.watermeter -= 2;
+                AguaScript.trueWatermeter -= 100 * Time.deltaTime;
+                AguaScript.watermeter = Convert.ToInt32(AguaScript.trueWatermeter);
                 wawa.Play();
             }
             else
@@ -52,7 +54,8 @@ public class PropulsionCheck : MonoBehaviour
                 AguaScript.dryActivity = true;
                 TPM.verticalVelocity = TPM.verticalVelocity / 2;
                 TPM.ani.SetBool("Propulsing", true);
-                AguaScript.watermeter -= 1;
+                AguaScript.trueWatermeter -= 100 * Time.deltaTime;
+                AguaScript.watermeter = Convert.ToInt32(AguaScript.trueWatermeter);
                 wawa.Play();
             }
             else
@@ -72,7 +75,8 @@ public class PropulsionCheck : MonoBehaviour
             TPM.ani.SetBool("Propulsing", true);
             propulsing = true;
             AguaScript.dryActivity = true;
-            AguaScript.watermeter -= 1;
+            AguaScript.trueWatermeter -= 100 * Time.deltaTime;
+            AguaScript.watermeter = Convert.ToInt32(AguaScript.trueWatermeter);
             wawa.Play();
         }
         else
