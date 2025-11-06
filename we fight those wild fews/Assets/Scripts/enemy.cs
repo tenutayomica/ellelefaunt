@@ -43,11 +43,11 @@ public class enemy : MonoBehaviour
         }
         if (distanceFromPlayer <= attackRange)
         {
-            //if (!isAttacking)
-            //{
-               // StartCoroutine(AttackPlayer());
-            //}
-            StartCoroutine(AttackPlayer());
+            if (!isAttacking)
+            {
+                StartCoroutine(AttackPlayer());
+            }
+           
 
         }
         else if (distanceFromPlayer <= sightRange)
@@ -62,19 +62,19 @@ public class enemy : MonoBehaviour
     private void ChasePlayer()
     {
         StopAllCoroutines();
-        //isAttacking = false;
+        isAttacking = false;
         thisEnemy.isStopped = false;
         thisEnemy.SetDestination(playerPos);
         Debug.LogWarning("i chase");
     }
     private IEnumerator AttackPlayer()
     {
-        //thisEnemy.isStopped = true;
-        //isAttacking = true;
+        thisEnemy.isStopped = true;
+        isAttacking = true;
         yield return new WaitForSeconds(timeBetweenAtacks);
         shoot();
-        //isAttacking = false;
-        //thisEnemy.isStopped = false;
+        isAttacking = false;
+        thisEnemy.isStopped = false;
     }
     void shoot()
     {
