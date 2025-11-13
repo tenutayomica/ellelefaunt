@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public bool tutorial1needed = true;
 
     void Awake()
     {

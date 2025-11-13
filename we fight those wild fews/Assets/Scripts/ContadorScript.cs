@@ -8,8 +8,8 @@ public class ContadorScript : MonoBehaviour
     public List<GameObject> Fires;
     public List<GameObject> Victims;
     public List<GameObject> Clues;
-    int currentFires;
-    int firesTotal;
+    public int currentFires;
+    public int firesTotal;
     int currentRescues;
     int rescuesTotal;
     int cluesTotal;
