@@ -10,10 +10,10 @@ public class ContadorScript : MonoBehaviour
     public List<GameObject> Clues;
     public int currentFires;
     public int firesTotal;
-    int currentRescues;
+    public int currentRescues;
     int rescuesTotal;
     int cluesTotal;
-    int currentClues;
+    public int currentClues;
     public Text firesScore;
     public Text victimsScore;
     public Text cluesScore;

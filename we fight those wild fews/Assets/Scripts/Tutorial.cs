@@ -17,6 +17,11 @@ public class Tutorial : MonoBehaviour
         {
             texts[0].SetActive(true);
         }
+        else
+        {
+        flags[0] = true;
+        flags[1] = true;
+        }
         flags[0] = false;
         flags[1] = false;
     }
