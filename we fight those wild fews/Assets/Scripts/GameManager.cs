@@ -24,7 +24,16 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().name == "Menu") Screen.lockCursor = false;
+        if (SceneManager.GetActiveScene().name == "menu") Screen.lockCursor = false;
         else Screen.lockCursor = true;
+    }
+
+    public void ChangeScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+    public void Close()
+    {
+        Application.Quit();
     }
 }
